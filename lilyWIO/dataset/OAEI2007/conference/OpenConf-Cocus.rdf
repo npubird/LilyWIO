@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <Alignment>
+    <xml>yes</xml>
+    <level>0</level>
+    <type>11</type>
+    <onto1>http://openconf</onto1>
+    <onto2>http://cocus</onto2>
+    <uri1>http://openconf</uri1>
+    <uri2>http://cocus</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Highly_Practical"/>
+        <entity2 rdf:resource="http://cocus#Abstract"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Clear_Accept"/>
+        <entity2 rdf:resource="http://cocus#Group_Email"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Submitted_Paper"/>
+        <entity2 rdf:resource="http://cocus#Activity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Reviewed_Paper"/>
+        <entity2 rdf:resource="http://cocus#Short_Paper"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#People"/>
+        <entity2 rdf:resource="http://cocus#User"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Classic_Papers"/>
+        <entity2 rdf:resource="http://cocus#Paper_Typologies"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Review_Committee"/>
+        <entity2 rdf:resource="http://cocus#Committe_Role"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Reviewer"/>
+        <entity2 rdf:resource="http://cocus#Reviewer_Role"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Author"/>
+        <entity2 rdf:resource="http://cocus#Author"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Programming"/>
+        <entity2 rdf:resource="http://cocus#Submission_Template"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Marginal_Tend_to_Accept"/>
+        <entity2 rdf:resource="http://cocus#Notification_Email"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Overall_Value"/>
+        <entity2 rdf:resource="http://cocus#Event_Tracks"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Contact_Author"/>
+        <entity2 rdf:resource="http://cocus#Corresponding_Author"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Advocate"/>
+        <entity2 rdf:resource="http://cocus#Admin_Role"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Committees"/>
+        <entity2 rdf:resource="http://cocus#Committee"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Review_Values"/>
+        <entity2 rdf:resource="http://cocus#Document"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Reviewer_Famliliarity"/>
+        <entity2 rdf:resource="http://cocus#Review_Form_Setup"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Reject"/>
+        <entity2 rdf:resource="http://cocus#Rejection_Email"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Paper_Review"/>
+        <entity2 rdf:resource="http://cocus#Preview"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Planed_Paper"/>
+        <entity2 rdf:resource="http://cocus#Person"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Domain_Topic"/>
+        <entity2 rdf:resource="http://cocus#Research_Topic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Topics"/>
+        <entity2 rdf:resource="http://cocus#Event_Setup"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Conference_Program"/>
+        <entity2 rdf:resource="http://cocus#Event"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Reccommendation"/>
+        <entity2 rdf:resource="http://cocus#Email"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Program_chair"/>
+        <entity2 rdf:resource="http://cocus#Approval_Email"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Format"/>
+        <entity2 rdf:resource="http://cocus#Administrator"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Advocated_Paper"/>
+        <entity2 rdf:resource="http://cocus#Full_Paper"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Paper"/>
+        <entity2 rdf:resource="http://cocus#Paper"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Computer_Science"/>
+        <entity2 rdf:resource="http://cocus#Email_Template"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Member"/>
+        <entity2 rdf:resource="http://cocus#Role"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Organisation"/>
+        <entity2 rdf:resource="http://cocus#submit"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Country"/>
+        <entity2 rdf:resource="http://cocus#recieve"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Web_address"/>
+        <entity2 rdf:resource="http://cocus#assigned_by"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#is_planned_in"/>
+        <entity2 rdf:resource="http://cocus#take_part_in"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#has_member"/>
+        <entity2 rdf:resource="http://cocus#created_by"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#Program_made_by"/>
+        <entity2 rdf:resource="http://cocus#confirmed_by"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#is_From_Area_of_Interest"/>
+        <entity2 rdf:resource="http://cocus#defined_by"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#planned_papers"/>
+        <entity2 rdf:resource="http://cocus#add"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#is_Type"/>
+        <entity2 rdf:resource="http://cocus#conists_of"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#made_program"/>
+        <entity2 rdf:resource="http://cocus#confirm"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#has_been_sent_by"/>
+        <entity2 rdf:resource="http://cocus#sent_by"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#is_stored_in"/>
+        <entity2 rdf:resource="http://cocus#define"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#has_sent"/>
+        <entity2 rdf:resource="http://cocus#send"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#is_member_of"/>
+        <entity2 rdf:resource="http://cocus#create"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://openconf#has_Result"/>
+        <entity2 rdf:resource="http://cocus#has_result"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

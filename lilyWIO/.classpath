@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/DevWork/SimPack.jar"/>
+	<classpathentry kind="lib" path="D:/jgrapht-0.7.0/jgrapht-jdk1.5.jar"/>
+	<classpathentry kind="lib" path="D:/DevWork/JAMA/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/DevWork/dom4j/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Jena-2.5.2/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Jena-2.5.2/lib/concurrent.jar"/>
+	<classpathentry kind="lib" path="D:/Jena-2.5.2/lib/icu4j_3_4.jar"/>
+	<classpathentry kind="lib" path="D:/Jena-2.5.2/lib/iri.jar"/>
+	<classpathentry sourcepath="D:/Jena-2.5.2/lib/jena.jar" kind="lib" path="D:/Jena-2.5.2/lib/jena.jar"/>
+	<classpathentry kind="lib" path="D:/Jena-2.5.2/lib/xercesImpl.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

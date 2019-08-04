@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::Logs of changes</title>
+</head>
+<body bgcolor="white" face="tahoma, arial">
+
+<a href=".."><img border="0" width="20%" src="../../oaei.jpg" align="right" /></a>
+<h1>Ontology Alignment Evaluation Initiative<br/>
+Modifications of the test library</h1>
+
+<h2><a href="../../versions/bench40.zip">4.0</a>: OAEI-2007 preversion
+  released 15/05/2007</h2>
+
+<ul compact="1">
+<li>Modified refalign (was not RDF/XML) [ALL]</li>
+</ul>
+<hr />
+
+<h2><a href="../../versions/bench35.zip">3.5</a>: updated version
+  23/08/2006</h2>
+
+<p><b>Version 3.5 was the evaluation version of <a href="http://oaei.ontologymatching.org/2006/">OAEI-2006</a>.</b></p>
+
+<p>Corrections from Alfio Ferrara:
+<ul compact="1">
+<li>Foaf specifications unreadable by Protégé [222,223,237-240,246,247,251,252,258-261,265,266]</li>
+</ul>
+
+<h2><a href="../../versions/bench34.zip">3.4</a>: updated version
+  31/07/2006</h2>
+<p>Changed the generation procedure</p>
+
+<p>Corrections from Sabine Massmann, Alfio Ferrara, Jérôme Euzenat:
+<ul compact="1">
+<li>Bad onto1/onto2 value in refalign [230]</li>
+<li>Incorrect reference to property [223, 230, 238, 252, 259]</li>
+<li>Incorrect xmlns and xml:base [301, 302, 304]</li>
+<li>Incorrect refalign.rdf [301-304]</li>
+</ul>
+
+<h2><a href="../../versions/bench33.zip">3.3</a>: updated version
+  22/07/2006</h2>
+
+<p>Corrections from Wei Hu:
+<ul compact="1">
+<li>Some tests were not correctly generated due to namespace problems [222,237,239,246,251,258,260,265]</li>
+</ul>
+
+<h2><a href="../../versions/bench32.zip">3.2</a>: updated version
+  12/07/2006</h2>
+
+<p>Corrections from S&#322;awomir Niedba&#322;a and Guillermo Nudelman Hess:
+<ul compact="1">
+<li>Many tests had incorrect refalign.rdf [ALL]</li>
+<li>Domain of "institution" becomes "Report" for avoiding equivalence out
+  of references [ALL]</li>
+</ul>
+
+<h2><a href="../../versions/bench31.zip">3.1</a>: updated version
+  08/07/2006</h2>
+
+<p>Corrections from S&#322;awomir Niedba&#322;a and Guillermo Nudelman Hess:
+<ul compact="1">
+<li>Many tests had incorrect refalign.rdf [ALL]</li>
+<li>230 was inconsistent [230]</li>
+<li>Attributes month and year have been reformatted for complying
+  XMLSchema datatypes [ALL]</li>
+</ul>
+
+<h2><a href="../../versions/bench30.zip">3.0</a>: OAEI-2006 preversion
+  released 09/06/2006</h2>
+
+<ul compact="1">
+<li>UTF-8 is now the standard test encoding (iso-latin an alternative)
+  [206/207/210]</li>
+<li>tests URIs/locations are now to
+  http://oaei.ontologymatching.org/tests [ALL]</li>
+<li>corrected an obvious bug in 102/refalign.rdf [102]</li>
+</ul>
+
+<hr />
+
+<h2><a href="../../versions/bench27.zip">2.7</a>: updated version
+  02/08/2005</h2>
+
+<p><b>Version 2.7 was the evaluation version of <a href="http://oaei.ontologymatching.org/2005/">OAEI-2005</a>.</b></p>
+
+<p>A correction by Raphaël Troncy:
+<ul compact="1">
+<li>Corrected a small syntactic error (datatype declaration in the value) [ALL]</li>
+</ul></p>
+
+<h2><a href="../../versions/bench26.zip">2.6</a>: updated version 08/07/2005</h2>
+
+<p><ul compact="1">
+<li>Really suppressed properties! [228...]</li>
+<li>Reinstalled the declaration of FOAF entities [228...]</li>
+<li>Fixed namespace problems [230]</li>
+</ul></p>
+
+<h2><a href="../../versions/bench25.zip">2.5</a>: updated version 04/07/2005</h2>
+
+<p><ul compact="1">
+<li>Used local version of wine and food ontologies [102]</li>
+<li>Made the UTF-8 reference alignments refering to the UTF-8 ontologies [206/207/210]</li>
+<li>Corrected a bug before the export of the UTF-8 ontologies [206/207/210]</li>
+<li>Added namespace in real-world test [301/304]</li>
+</ul></p>
+
+<h2><a href="../../versions/bench24.zip">2.4</a>: updated version 01/07/2005</h2>
+
+<p><ul compact="1">
+<li>#lastName is declared with rdf:ID</li>
+</ul></p>
+
+<h2><a href="../../versions/bench23.zip">2.3</a>: updated version 01/07/2005</h2>
+
+<p>Addresses comments from Ningsheng Jian:
+<ul compact="1">
+<li>Replaced references to &amp;xsd;String by &amp;xsd;string [230]</li>
+<li>Replaced firstName by &amp;foaf;firstName [230]</li>
+<li>Added lastName and language in the alignments</li>
+<li>Added in index.html a comment stating that the original file can
+  be used for 102 [102]</li>
+<li>Cleaned-up the reference alignment for [230]</li>
+<li>Added in index.html a comment stating that the original file can
+  be used for 102 [102]</li>
+</ul></p>
+
+<h2><a href="../../versions/bench22.zip">2.2</a>: updated version 29/06/2005</h2>
+
+<p>Addresses comments by Marc Ehrig and Mikalai Yatskevich:
+<ul compact="1">
+<li>Translated the labels of all translation transformation;</li>
+<li>The generation of an allValuesFrom with empty body has been
+  avoided [104];</li>
+<li>Avoided discarding the foaf property declarations [228/230/...]</li>
+<li>Replaced institutionName by organizationName [230]</li>
+<li>Suppressed dc:descriptions in Property declarations [230]</li>
+<li>Updated the wine/food ontologies to the standard ones [102]</li>
+</ul></p>
+
+<h2><a href="../../versions/bench21.zip">2.1</a>: preversion released 10/06/2005</h2>
+
+<h2><a href="../../versions/bench20.zip">2.0</a>: unreleased version</h2>
+
+<hr />
+
+<h2><a href="../../versions/oacontest17.zip">1.7</a>: OAEI-2004 final version released 10/10/2004</h2>
+
+<p><b>Version 1.7 was the evaluation version of <a href="http://oaei.ontologymatching.org/2004/Contest/">OAEI-2004</a>.</b></p>
+
+<h2><a href="../../versions/oacontest16.zip"></a>1.6: unreleased</h2>
+<h2><a href="../../versions/oacontest15.zip"></a>1.5: unreleased</h2>
+<h2><a href="../../versions/oacontest14.zip"></a>1.4: unreleased</h2>
+<h2><a href="../../versions/oacontest13.zip"></a>1.3: unreleased</h2>
+
+<h2><a href="../../versions/oacontest12.zip">1.2</a>: released 5/9/2004</h2>
+
+<p>List of modifications (thanks to Natasha Noy and David Loup) to the tests:
+<ul compact="1">
+<li>changed test n°102 with the actual food.owl file (bug);</li>
+<li>suppressed mentions to BookPart objects in n°101,204,223,224,225 (bug);</li>
+<li>corrected rdf:reference mention in n°103 (bug);</li>
+<li>corrected xsd:langage mention in n°206 (bug);</li>
+<li>corrected mentions to parseType="Compilation" and parseType="sqxsqkd" to parseType="Collection" (bug)</li>
+<li>corrected mentions to &xsd;sqkxndc and &xsd;idiom to xsd;language (bug)</li>
+<li>corrected mentions to plink.org to purl.org (bug)</li>
+<li>corrected ill-written "Techreport" in refaligns (bug).</li>
+<li>changed refalign mentions to local filesystem URI;</li>
+<li>changed refalign and RDF namespaces in refalign to the correct ones;</li>
+<li>updated many discarded entities in the refalign n°230, and others
+in 301-304;</li>
+<li>turned location from a DatatypeProperty to an ObjectProperty (bug).</li>
+<li>added an UTF-8 206 file;</li>
+<li>introduced more generalisation in test n°103 using xsd:integer instead of xsd:nonNegativeIngeger in startPage and endPage (improvement);</li>
+<li>better defined test n°230 (School and Institution being embedded into their refering classes).</li>
+<li>added in http://co4.inrialpes.fr/align/dtd/refalign.rdfs kindly provided by Natasha.</li>
+<li>added a letter at the begining of each fragment identifiers (for Jena compliance, this is a reasonable request);</li>
+<li>not changed the diacritics in tests n°206 and 224 (for OWLAPI
+  compliance, this must be solved by these Parsers. However,
+  contestors may use the UTF-8 counterpart provided).</li>
+<li>OWL API parser display problems with importing in test n°102.</li>
+</ul>
+
+<h2><a href="../../versions/oacontest11.zip">1.1</a>: corrected version released 3/9/2004</h2>
+
+<h2><a href="../../versions/oacontest10.zip">1.0</a>: OAEI-2004 released 2/9/2004</h2>
+
+<h2><a href="../../versions/oacontest09.zip">0.9</a>: OAEI-2004 preversion released 9/7/2004</h2>
+
+<h1>Contacts</h1>
+<p>Contact address is Jerome : Euzenat # inrialpes : fr</p>
+<hr />
+<center><small>http://oaei.ontologymatching.org/2007/benchmarks/logs.html</small></center>
+<hr />
+$Id: logs.html,v 1.26 2007/05/15 22:12:22 euzenat Exp $
+</body>
+</html>

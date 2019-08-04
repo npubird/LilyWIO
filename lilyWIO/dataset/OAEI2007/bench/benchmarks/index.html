@@ -1,0 +1,1025 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::Test library</title>
+</head>
+<body bgcolor="white" face="tahoma, arial">
+
+<table width="100%">
+<tr BGCOLOR="yellow" ALIGN="center"><td>
+Please use the latest version of the benchmantk suite (see <a href="logs.html">here</a>).
+The benchmark suite in one file is available <a href="bench.zip">HERE</a>.<br />
+</td></tr>
+</table>
+
+<a href=".."><img border="0" width="20%" src="../../oaei.jpg" align="right" /></a>
+
+<h1>Ontology Alignment Evaluation Initiative<br/>
+Test library</h1>
+
+<h2>Reference ontology</h2>
+
+<p>The domain of this first test is Bibliographic references. It is,
+  of course, based on a subjective view of what must be a
+  bibliographic ontology. There can be many different classifications
+  of publications (based on area, quality, etc.). We choose the one
+  common among scholars based on mean of publications; as many
+  ontologies below (tests #301-304), it is reminiscent to BibTeX.</p>
+<p>This reference ontology contains 33 named classes, 24 object
+  properties, 40 data properties, 56 named individuals and 20
+  anonymous individuals.</p>
+
+<p>The complete ontology is that of <a href="#101">test #101</a>.</p-->
+
+<p>The reference ontology is based on the one of the first <a
+  href="../2004/Contest">EON Ontology Alignment Contest</a>. It is
+  improved by comprising a number of circular relations that were
+  missing from the first test. In 2006, we have put the UTF-8 version
+  of the tests as standard, the ISO-8859-1 being optional. In 2007,
+  the tests are the same as in 2006.</p>
+
+<!--p>Its schema is the following:<br />
+Reference
+<ul compact="1">
+<li>Academic
+<ul compact="1">
+<li>PhDThesis</li>
+<li>MasterThesis</li>
+</ul>
+</li>
+<li>Book
+<ul compact="1">
+<li>Monography</li>
+<li>Collection</li>
+<li>Proceedings</li>
+</ul>
+</li>
+<li>Part
+<ul compact="1">
+<li>Article</li>
+<li>Chapter</li>
+<li>InCollection</li>
+<li>Communication</li>
+</ul>
+</li>
+<li>Report
+<ul compact="1">
+<li>TechnicalReport</li>
+<li>ResearchReport</li>
+<li>Deliverable</li>
+<li>Recommendation</li>
+<li>Standard</li>
+</ul>
+</li>
+<li>Informal
+<ul compact="1">
+<li>Booklet</li>
+<li>Manual</li>
+<li>Unpublished</li>
+<li>LectureNotes</li>
+</ul>
+</li>
+<li>MotionPicture</li>
+<li>Misc</li>
+</ul>
+</p-->
+
+<p>The reference ontology is put in the context of the semantic web
+  by using other external resources for expressing non
+  bibliographic information. It takes advantage of FOAF (<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>) and
+  iCalendar (<a href="http://www.w3.org/2002/12/cal/">http://www.w3.org/2002/12/cal/</a>) for expressing the People, Organization and Event
+  concepts. Here are the external reference used:
+<ul compact="1">
+<li>http://www.w3.org/2002/12/cal/#:Vevent (defined in
+  <a href="http://www.w3.org/2002/12/cal/ical.n3">http://www.w3.org/2002/12/cal/ical.n3</a> and supposedly in <a href="http://www.w3.org/2002/12/cal/ical.rdf">http://www.w3.org/2002/12/cal/ical.rdf</a>)</li>
+<li>http://xmlns.com/foaf/0.1/#:Person (defined in <a href="http://xmlns.com/foaf/0.1/index.rdf">http://xmlns.com/foaf/0.1/index.rdf</a>)</li>
+<li>http://xmlns.com/foaf/0.1/#:Organization (defined in <a href="http://xmlns.com/foaf/0.1/index.rdf">http://xmlns.com/foaf/0.1/index.rdf</a>)</li>
+</ul>
+</p>
+<p>This reference ontology is a bit limited in the sense that it does not
+  contain attachement to several classes.</p>
+<p>Similarly the kind of proposed alignments is still limited: they
+  only match named classes and properties, they mostly use the "=" relation with
+  confidence of 1.</p>
+<p>The ontologies are described in OWL-DL and serialized in the
+  RDF/XML format. I'd be happy to translate them into N3 if someone
+  have some translation program.</p-->
+
+<h2>Tests at a glance</h2>
+
+<p>The tests are systematically generated to as to start from some
+  reference ontology and discarding a number of information in order
+  to evaluate how the algorithm behave when this information is
+  lacking.</p>
+<p>Test numbering (almost) fully preserves the numbering of the
+  first EON contest.</p>
+
+<p>The table below summarize what has been retracted from the
+  reference ontology. There are here 6 catagories of alteration:
+<dl compact="1">
+  <dt>Name</dt><dd>Name of entities that can be replaced by (R/N)
+  random strings, (S)ynonyms, (N)ame with different conventions, (F)
+  strings in another language than english.</dd>
+  <dt>Comments</dt><dd>Comments can be (N) suppressed or (F)
+  translated in another language.</dd>
+  <dt>Specialization Hierarchy</dt><dd>can be (N) suppressed,
+  (E)xpansed or (F)lattened.</dd>
+  <dt>Instances</dt><dd>can be (N) suppressed</dd>
+  <dt>Properties</dt><dd>can be (N) suppressed or (R) having the
+  restrictions on classes discarded.</dd>
+  <dt>Classes</dt><dd>can be (E)xpanded, i.e., relaced by several classes or (F)latened.</dd>
+</dl>
+</p>
+<table>
+<tr><td>#</td><td>Name</td><td>Com</td><td>Hier</td><td>Inst</td><td>Prop</td><td>Class</td><td>Comment</td><td></td></tr>
+<tr><td><a
+	   href="#101">101</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Reference alignment</td><td></td></tr>
+<tr><td><a
+	   href="#102">102</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Irrelevant ontology</td><td></td></tr>
+<tr><td><a
+	   href="#103">103</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Language generalization</td><td></td></tr>
+<tr><td><a
+	   href="#104">104</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Language restriction</td><td></td></tr>
+<tr><td><a href="#201">201</a></td><td
+				      bgcolor="purple">R</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>No names</td><td></td></tr>
+<tr><td><a href="#202">202</a></td><td bgcolor="purple">R</td><td
+								 bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>0</td><td>No names, no comments</td><td></td></tr>
+<tr><td><a href="#203">203</a></td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>0</td><td>No comments (was missspelling)</td><td></td></tr>
+<tr><td><a href="#204">204</a></td><td bgcolor="yellow">C</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Naming conventions</td><td></td></tr>
+<tr><td><a href="#205">205</a></td><td bgcolor="orange">S</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Synonyms</td><td></td></tr>
+<tr><td><a href="#206">206</a></td><td bgcolor="pink">F</td><td bgcolor="pink">F</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Translation</td><td></td></tr>
+<tr><td><a href="#207">207</a></td><td bgcolor="pink">F</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#208">208</a></td><td bgcolor="yellow">C</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#209">209</a></td><td bgcolor="orange">S</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#210">210</a></td><td bgcolor="pink">F</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#211">211</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#212">212</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#213">213</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#214">214</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#215">215</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#216">216</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#217">217</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#218">218</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#219">219</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><a href="#220">220</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr-->
+<tr><td><a href="#221">221</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td>No specialisation</td><td></td></tr>
+<tr><td><a href="#222">222</a></td><td>0</td><td>0</td><td bgcolor="pink">F</td><td>0</td><td>0</td><td>0</td><td>Flatenned hierarchy</td><td></td></tr>
+<tr><td><a href="#223">223</a></td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td>0</td><td>0</td><td>0</td><td>Expanded hierarchy</td><td></td></tr>
+<tr><td><a href="#224">224</a></td><td>0</td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>No instance</td><td></td></tr>
+<tr><td><a href="#225">225</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td bgcolor="purple">R</td><td>0</td><td>No restrictions</td><td></td></tr>
+<tr><td>226</td><td></td><td></td><td></td><td></td><td></td><td></td><td>No datatypes</td><td></td></tr>
+<tr><td>227</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Unit difference</td><td></td></tr>
+<tr><td><a href="#228">228</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>No properties</td><td></td></tr>
+<tr><td>229</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Class vs instances</td><td></td></tr>
+<tr><td><a href="#230">230</a></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td bgcolor="pink">F</td><td>Flattened classes</td><td></td></tr>
+<tr><td>231*</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td>Expanded classes</td><td></td></tr>
+<tr><td><a href="#232">232</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#233">233</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#234">234</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td bgcolor="pink">F</td><td></td><td></td></tr>
+<tr><td><a href="#235">235</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td></td><td></td></tr-->
+<tr><td><a href="#236">236</a></td><td>0</td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#237">237</a></td><td>0</td><td>0</td><td bgcolor="pink">F</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#238">238</a></td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#239">239</a></td><td>0</td><td>0</td><td bgcolor="pink">F</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#240">240</a></td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#241">241</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#242">242</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#243">243</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#244">244</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#245">245</a></td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td></td><td></td></tr-->
+<tr><td><a href="#246">246</a></td><td>0</td><td>0</td><td bgcolor="pink">F</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#247">247</a></td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#248">248</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#249">249</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#250">250</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#251">251</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="pink">F</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#252">252</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#253">253</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#254">254</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#255">255</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#256">256</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td bgcolor="lightgreen">E</td><td></td><td></td></tr-->
+<tr><td><a href="#257">257</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#258">258</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="pink">F</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#259">259</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#260">260</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="pink">F</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#261">261</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td>0</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#262">262</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#263">263</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#264">264</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td bgcolor="lightgreen">E</td><td></td><td></td></tr-->
+<tr><td><a href="#265">265</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="pink">F</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#266">266</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<!--tr><td><a href="#267">267</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td>0</td><td></td><td></td></tr>
+<tr><td><a href="#268">268</a></td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightblue">N</td><td bgcolor="lightgreen">E</td><td></td><td></td></tr-->
+<tr><td><a href="#301">301</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Real: BibTeX/MIT</td><td></td></tr>
+<tr><td><a href="#302">302</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Real: BibTeX/UMBC</td><td></td></tr>
+<tr><td><a href="#303">303</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Real: Karlsruhe</td><td></td></tr>
+<tr><td><a href="#304">304</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Real: INRIA</td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<h1>Alignments</h1>
+
+<p>Below are provided the set of tests with expected alignments in the
+Alignment format described 
+<a href="../align.html">here</a>.
+Each ontology is to be aligned with the reference ontology (i.e.,
+   that of <a href="#101">test #101</a>).</p>
+<p>The only interesting alignments are those involving classes and
+  properties of the given ontologies. So the alignments should not
+  align individuals, nor entities from the external ontologies.
+</p>
+<p>There is some chance that the final test be improved by adding
+ entity expansion and reduction. It is also possible that there will
+ be a lot of more instances in each ontology.</p>
+
+<hr />
+<a name="101"/>
+<h2>101) Concept test: Id</h2>
+<p>This test compares the ontology to itself.
+</p>
+<p>Ontology : [<a href="101/onto.rdf">RDF/XML</a>]
+[<a href="101/onto.html">HTML</a>]<br />
+Alignment : [<a href="101/refalign.rdf">RDF/XML</a>]
+[<a href="101/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="102"/>
+<h2>102) Concept test: ?</h2>
+<p>This test compares the ontology to a totally irrelevant one. We
+  ussed the food ontology given in the OWL guide (verbatim).</p>
+<p>Ontology : [<a href="102/onto.rdf">RDF/XML</a>]
+[<a href="102/onto.html">HTML</a>]<br />
+Alignment : [<a href="102/refalign.rdf">RDF/XML</a>]
+[<a href="102/refalign.html">HTML</a>]<br />
+</p>
+<p><b>NOTE:</b> The onto.rdf file is provided for compatibility
+  purposes. However, it is possible to run the test directly on the
+  true file, i.e.,
+  http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine.
+  Indeed, wine imports food which imports wine and some parsers do
+  not realize that onto.rdf is the same ontology as wine.
+</p>
+
+<hr />
+<a name="103"/>
+<h2>103) Concept test: Language generalisation</h2>
+<p>This test compares the ontology with its generalisation in OWL Lite
+  (i.e., unavailable constraints are replaced by the more general
+  available). The generalization basically removes owl:unionOf and
+  owl:oneOf and the Property types (owl:TransitiveProperty).
+</p>
+<p>Ontology : [<a href="103/onto.rdf">RDF/XML</a>]
+[<a href="103/onto.html">HTML</a>]<br />
+Alignment : [<a href="103/refalign.rdf">RDF/XML</a>]
+[<a href="103/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="104"/>
+<h2>104) Concept test: Language restriction</h2>
+<p>This test compares the ontology with its restriction in OWL Lite
+  (where unavailable constraints have been discarded).
+</p>
+<p>Ontology : [<a href="104/onto.rdf">RDF/XML</a>]
+[<a href="104/onto.html">HTML</a>]<br />
+Alignment : [<a href="104/refalign.rdf">RDF/XML</a>]
+[<a href="104/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="201"/>
+<h2>201) Systematic: No names</h2>
+<p>Each label or identifier is replaced by a random one.</p>
+<p>Ontology : [<a href="201/onto.rdf">RDF/XML</a>]
+[<a href="201/onto.html">HTML</a>]<br />
+Alignment : [<a href="201/refalign.rdf">RDF/XML</a>]
+[<a href="201/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="202"/>
+<h2>202) Systematic: No names, no comment</h2>
+<p>Each label or identifier is replaced by a random one. Comments
+  (rdfs:comment and dc:description) have been suppressed as well.</p>
+<p>Ontology : [<a href="202/onto.rdf">RDF/XML</a>]
+[<a href="202/onto.html">HTML</a>]<br />
+Alignment : [<a href="202/refalign.rdf">RDF/XML</a>]
+[<a href="202/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="203"/>
+<h2>203) Systematic: Misspelling</h2>
+<p>A random, but consistent, typo generator should be applied to
+ labels and comments.</p>
+<p>Not available in this test (if you know how to do it, contact me).</p>
+<!--p>Ontology : [<a href="203/onto.rdf">RDF/XML</a>]
+[<a href="203/onto.html">HTML</a>]<br />
+Alignment : [<a href="203/refalign.rdf">RDF/XML</a>]
+[<a href="203/refalign.html">HTML</a>]<br />
+</p-->
+
+<hr />
+<a name="204"/>
+<h2>204) Systematic: Naming conventions</h2>
+<p>Different naming conventions (Uppercasing, underscore, dash, etc.)
+  are used for labels. Comments have been suppressed.</p>
+<p>Ontology : [<a href="204/onto.rdf">RDF/XML</a>]
+[<a href="204/onto.html">HTML</a>]<br />
+Alignment : [<a href="204/refalign.rdf">RDF/XML</a>]
+[<a href="204/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="205"/>
+<h2>205) Systematic: Synonyms</h2>
+<p>Labels are replaced by synonyms. Comments have been suppressed.</p>
+<p>Ontology : [<a href="205/onto.rdf">RDF/XML</a>]
+[<a href="205/onto.html">HTML</a>]<br />
+Alignment : [<a href="205/refalign.rdf">RDF/XML</a>]
+[<a href="205/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="206"/>
+<h2>206) Systematic: Foreign names</h2>
+<p>The complete ontology is translated to another language than
+  english (French in the current case, but other languages would be fine).
+</p>
+<p>Ontology : [<a href="206/onto.rdf">RDF/XML</a>]
+[<a href="206/onto-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="206/onto.html">HTML</a>]<br />
+Alignment : [<a href="206/refalign.rdf">RDF/XML</a>]
+[<a href="206/refalign-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="206/refalign.html">HTML</a>]<br />
+</p>
+<p><b>NOTE:</b> You can use alternatively the ISO-Latin-1 (ISO-8859-1)
+  version of the tests by renaming them after their UTF-8 version.
+</p>
+
+<hr />
+<a name="207"/>
+<h2>207) Systematic: </h2>
+<p>Each label or identifieris translated to another language than
+  english (French in the current case, but other languages would be fine).
+<p>Ontology : [<a href="207/onto.rdf">RDF/XML</a>]
+[<a href="207/onto-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="207/onto.html">HTML</a>]<br />
+Alignment : [<a href="207/refalign.rdf">RDF/XML</a>]
+[<a href="207/refalign-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="207/refalign.html">HTML</a>]<br />
+</p>
+<p><b>NOTE:</b> You can use alternatively the ISO-Latin-1 (ISO-8859-1)
+  version of the tests by renaming them after their UTF-8 version.
+</p>
+
+<hr />
+<a name="208"/>
+<h2>208) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="208/onto.rdf">RDF/XML</a>]
+[<a href="208/onto.html">HTML</a>]<br />
+Alignment : [<a href="208/refalign.rdf">RDF/XML</a>]
+[<a href="208/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="209"/>
+<h2>209) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="209/onto.rdf">RDF/XML</a>]
+[<a href="209/onto.html">HTML</a>]<br />
+Alignment : [<a href="209/refalign.rdf">RDF/XML</a>]
+[<a href="209/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="210"/>
+<h2>210) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="210/onto.rdf">RDF/XML</a>]
+[<a href="210/onto-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="210/onto.html">HTML</a>]<br />
+Alignment : [<a href="210/refalign.rdf">RDF/XML</a>]
+[<a href="210/refalign-iso8859.rdf">RDF/XML in ISO-8859-1</a>]
+[<a href="210/refalign.html">HTML</a>]<br />
+</p>
+<p><b>NOTE:</b> You can use alternatively the ISO-Latin-1 (ISO-8859-1)
+  version of the tests by renaming them after their UTF-8 version.
+</p>
+
+<hr />
+<a name="221"/>
+<h2>221) Systematic: No hierarchy</h2>
+<p>All subclass assertions to named classes are suppressed.</p>
+<p>Ontology : [<a href="221/tonto.rdf">RD/XML</a>]
+[<a href="221/onto.html">HTML</a>]<br />
+Alignment : [<a href="221/refalign.rdf">RDF/XML</a>]
+[<a href="221/refalign.html">HTML</a>]<br />
+</p>
+<p>(variation: compile inheritance)</p>
+
+<hr />
+<a name="222"/>
+<h2>222) Systematic: Flattened hierarchy</h2>
+<p>A hierarchy still exists but has been strictly reduced.</p>
+<p>Ontology : [<a href="222/tonto.rdf">RDF/XML</a>]
+[<a href="222/onto.html">HTML</a>]<br />
+Alignment : [<a href="222/refalign.rdf">RDF/XML</a>]
+[<a href="222/refalign.html">HTML</a>]<br />
+</p>
+<p>The alignment here contains relations which are not "=" but "&lt;".</p>
+
+<hr />
+<a name="223"/>
+<h2>223) Systematic: Expanded hierarchy</h2>
+<p>Numerous intermediate classes are introduced within the hierarchy.</p>
+<p>Ontology : [<a href="223/tonto.rdf">RDF/XML</a>]
+[<a href="223/onto.html">HTML</a>]<br />
+Alignment : [<a href="223/refalign.rdf">RDF/XML</a>]
+[<a href="223/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="224"/>
+<h2>224) Systematic: No instances</h2>
+<p>All individuals have been suppressed from the ontology.</p>
+<p>Ontology : [<a href="224/onto.rdf">RDF/XML</a>]
+[<a href="224/onto.html">HTML</a>]<br />
+Alignment : [<a href="224/refalign.rdf">RDF/XML</a>]
+[<a href="224/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="225"/>
+<h2>225) Systematic: No restrictions</h2>
+<p>All local restrictions on properties have been suppressed from the ontology.</p>
+<p>Ontology : [<a href="225/onto.rdf">RDF/XML</a>]
+[<a href="225/onto.html">HTML</a>]<br />
+Alignment : [<a href="225/refalign.rdf">RDF/XML</a>]
+[<a href="225/refalign.html">HTML</a>]<br />
+</p>
+<p>(variation: no property nor global restrictions on properties)</p>
+
+<hr />
+<a name="226"/>
+<h2>226) Systematic: No datatypes</h2>
+<p>In this test all datatypes are converted to xsd:string.
+</p>
+<p>Not available in this test</p>
+<p>Ontology : [<a href="226/onto.rdf">RDF/XML</a>]
+[<a href="226/onto.html">HTML</a>]<br />
+Alignment : [<a href="226/refalign.rdf">RDF/XML</a>]
+[<a href="226/refalign.html">HTML</a>]<br />
+</p-->
+
+<hr />
+<a name="227"/>
+<h2>227) Systematic: Unit differences</h2>
+<p>(Measurable) values are expressed in different datatypes.</p>
+<p>Not available in this test</p>
+<p>Ontology : [<a href="227/onto.rdf">RDF/XML</a>]
+[<a href="227/onto.html">HTML</a>]<br />
+Alignment : [<a href="227/refalign.rdf">RDF/XML</a>]
+[<a href="227/refalign.html">HTML</a>]<br />
+</p-->
+
+<hr />
+<a name="228"/>
+<h2>228) Systematic: No properties</h2>
+<p>Properties and relations between objects have been completely suppressed.
+</p>
+<p>Ontology : [<a href="228/onto.rdf">RDF/XML</a>]
+[<a href="228/onto.html">HTML</a>]<br />
+Alignment : [<a href="228/refalign.rdf">RDF/XML</a>]
+[<a href="228/refalign.html">HTML</a>]<br />
+</p>
+<p>(variation: leave the properties in instances)</p>
+
+<hr />
+<a name="229"/>
+<h2>229) Systematic: Class vs instances</h2>
+<p>Some classes have become instances.</p>
+<p>Not available in this test.</p>
+<p>Ontology : [<a href="229/onto.rdf">RDF/XML</a>]
+[<a href="229/onto.html">HTML</a>]<br />
+Alignment : [<a href="229/refalign.rdf">RDF/XML</a>]
+[<a href="229/refalign.html">HTML</a>]<br />
+</p-->
+
+<hr />
+<a name="230"/>
+<h2>230) Systematic: Flattening entities</h2>
+<p>Some components of classes are expanded in the class structure
+  (e.g., year, month, day attributes instead of date).</p>
+<p>Ontology : [<a href="230/onto.rdf">RDF/XML</a>]
+[<a href="230/onto.html">HTML</a>]<br />
+Alignment : [<a href="230/refalign.rdf">RDF/XML</a>]
+[<a href="230/refalign.html">HTML</a>]<br />
+</p>
+<p>Here one limitation of the proposed format is that it does not cover
+  alignments such as: journalName = name o journal.</p>
+
+<hr />
+<a name="231"/>
+<h2>231) Systematic: Multiplying entities</h2>
+<p>Some classes are spreaded over several classes.</p>
+<p>Not available in this test.</p>
+<!--p>Ontology : [<a href="231/onto.rdf">RDF/XML</a>]
+[<a href="231/onto.html">HTML</a>]<br />
+Alignment : [<a href="231/refalign.rdf">RDF/XML</a>]
+[<a href="231/refalign.html">HTML</a>]<br />
+</p-->
+
+<hr />
+<a name="232"/>
+<h2>232) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="232/onto.rdf">RDF/XML</a>]
+[<a href="232/onto.html">HTML</a>]<br />
+Alignment : [<a href="232/refalign.rdf">RDF/XML</a>]
+[<a href="232/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="233"/>
+<h2>233) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="233/onto.rdf">RDF/XML</a>]
+[<a href="233/onto.html">HTML</a>]<br />
+Alignment : [<a href="233/refalign.rdf">RDF/XML</a>]
+[<a href="233/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="236"/>
+<h2>236) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="236/onto.rdf">RDF/XML</a>]
+[<a href="236/onto.html">HTML</a>]<br />
+Alignment : [<a href="236/refalign.rdf">RDF/XML</a>]
+[<a href="236/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="237"/>
+<h2>237) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="237/onto.rdf">RDF/XML</a>]
+[<a href="237/onto.html">HTML</a>]<br />
+Alignment : [<a href="237/refalign.rdf">RDF/XML</a>]
+[<a href="237/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="238"/>
+<h2>238) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="238/onto.rdf">RDF/XML</a>]
+[<a href="238/onto.html">HTML</a>]<br />
+Alignment : [<a href="238/refalign.rdf">RDF/XML</a>]
+[<a href="238/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="239"/>
+<h2>239) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="239/onto.rdf">RDF/XML</a>]
+[<a href="239/onto.html">HTML</a>]<br />
+Alignment : [<a href="239/refalign.rdf">RDF/XML</a>]
+[<a href="239/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="240"/>
+<h2>240) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="240/onto.rdf">RDF/XML</a>]
+[<a href="240/onto.html">HTML</a>]<br />
+Alignment : [<a href="240/refalign.rdf">RDF/XML</a>]
+[<a href="240/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="241"/>
+<h2>241) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="241/onto.rdf">RDF/XML</a>]
+[<a href="241/onto.html">HTML</a>]<br />
+Alignment : [<a href="241/refalign.rdf">RDF/XML</a>]
+[<a href="241/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="246"/>
+<h2>246) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="246/onto.rdf">RDF/XML</a>]
+[<a href="246/onto.html">HTML</a>]<br />
+Alignment : [<a href="246/refalign.rdf">RDF/XML</a>]
+[<a href="246/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="247"/>
+<h2>247) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="247/onto.rdf">RDF/XML</a>]
+[<a href="247/onto.html">HTML</a>]<br />
+Alignment : [<a href="247/refalign.rdf">RDF/XML</a>]
+[<a href="247/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="248"/>
+<h2>248) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="248/onto.rdf">RDF/XML</a>]
+[<a href="248/onto.html">HTML</a>]<br />
+Alignment : [<a href="248/refalign.rdf">RDF/XML</a>]
+[<a href="248/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="249"/>
+<h2>249) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="249/onto.rdf">RDF/XML</a>]
+[<a href="249/onto.html">HTML</a>]<br />
+Alignment : [<a href="249/refalign.rdf">RDF/XML</a>]
+[<a href="249/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="250"/>
+<h2>250) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="250/onto.rdf">RDF/XML</a>]
+[<a href="250/onto.html">HTML</a>]<br />
+Alignment : [<a href="250/refalign.rdf">RDF/XML</a>]
+[<a href="250/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="251"/>
+<h2>251) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="251/onto.rdf">RDF/XML</a>]
+[<a href="251/onto.html">HTML</a>]<br />
+Alignment : [<a href="251/refalign.rdf">RDF/XML</a>]
+[<a href="251/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="252"/>
+<h2>252) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="252/onto.rdf">RDF/XML</a>]
+[<a href="252/onto.html">HTML</a>]<br />
+Alignment : [<a href="252/refalign.rdf">RDF/XML</a>]
+[<a href="252/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="253"/>
+<h2>253) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="253/onto.rdf">RDF/XML</a>]
+[<a href="253/onto.html">HTML</a>]<br />
+Alignment : [<a href="253/refalign.rdf">RDF/XML</a>]
+[<a href="253/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="254"/>
+<h2>254) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="254/onto.rdf">RDF/XML</a>]
+[<a href="254/onto.html">HTML</a>]<br />
+Alignment : [<a href="254/refalign.rdf">RDF/XML</a>]
+[<a href="254/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="257"/>
+<h2>257) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="257/onto.rdf">RDF/XML</a>]
+[<a href="257/onto.html">HTML</a>]<br />
+Alignment : [<a href="257/refalign.rdf">RDF/XML</a>]
+[<a href="257/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="258"/>
+<h2>258) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="258/onto.rdf">RDF/XML</a>]
+[<a href="258/onto.html">HTML</a>]<br />
+Alignment : [<a href="258/refalign.rdf">RDF/XML</a>]
+[<a href="258/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="259"/>
+<h2>259) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="259/onto.rdf">RDF/XML</a>]
+[<a href="259/onto.html">HTML</a>]<br />
+Alignment : [<a href="259/refalign.rdf">RDF/XML</a>]
+[<a href="259/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="260"/>
+<h2>260) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="260/onto.rdf">RDF/XML</a>]
+[<a href="260/onto.html">HTML</a>]<br />
+Alignment : [<a href="260/refalign.rdf">RDF/XML</a>]
+[<a href="260/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="261"/>
+<h2>261) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="261/onto.rdf">RDF/XML</a>]
+[<a href="261/onto.html">HTML</a>]<br />
+Alignment : [<a href="261/refalign.rdf">RDF/XML</a>]
+[<a href="261/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="262"/>
+<h2>262) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="262/onto.rdf">RDF/XML</a>]
+[<a href="262/onto.html">HTML</a>]<br />
+Alignment : [<a href="262/refalign.rdf">RDF/XML</a>]
+[<a href="262/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="265"/>
+<h2>265) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="265/onto.rdf">RDF/XML</a>]
+[<a href="265/onto.html">HTML</a>]<br />
+Alignment : [<a href="265/refalign.rdf">RDF/XML</a>]
+[<a href="265/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="266"/>
+<h2>266) Systematic: </h2>
+<p></p>
+<p>Ontology : [<a href="266/onto.rdf">RDF/XML</a>]
+[<a href="266/onto.html">HTML</a>]<br />
+Alignment : [<a href="266/refalign.rdf">RDF/XML</a>]
+[<a href="266/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="301"/>
+<h2>301) Real ontology: BibTeX/MIT</h2>
+<p>For a computer scientist, BibTeX is the starting point for a
+  useful bibliographic ontology. It is of wide use and relatively
+  well thought out.
+This ontology can be found at <a href=""></a> and is documented in <a href="http://visus.mit.edu/bibtex/0.1/">BibTex
+in OWL</a>.</p>
+<p>This is a test of comparing our test ontology with an actual
+  ontology, simpler and closer to the initial BibTeX ontology.
+  The alignment result contains some inclusion (&lt;) alignment relations.
+</p>
+
+</p>
+<p>Ontology : [<a href="301/onto.rdf">RDF/XML</a>]
+[<a href="301/onto.html">HTML</a>]<br />
+Alignment : [<a href="301/refalign.rdf">RDF/XML</a>]
+[<a href="301/refalign.html">HTML</a>]<br />
+</p>
+<!--p>Its schema is the following:<br />
+<ul compact="1">
+<li>article</li>
+<li>book</li>
+<li>inbook</li>
+<li>incollection</li>
+<li>inproceedings</li>
+<li>mastersthesis</li>
+<li>phdthesis</li>
+<li>proceedings</li>
+<li>techreport</li>
+<li>booklet</li>
+<li>misc</li>
+</ul>
+</p-->
+
+
+<hr />
+<a name="302"/>
+<h2>302) Real ontology: BibTeX/UMBC</h2>
+<p>This ontology is very similar to the previous one, even closer to
+  the genuine BibTeX, with different
+  extensions and naming conventions. It can be found at <a
+  href="http://ebiquity.umbc.edu">http://ebiquity.umbc.edu</a>.
+</p>
+<p>The alignment result also contains some inclusion (&lt;) alignment
+  relations.</p>
+<p>Ontology : [<a href="302/onto.rdf">RDF/XML</a>]
+[<a href="302/onto.html">HTML</a>]<br />
+Alignment : [<a href="302/refalign.rdf">RDF/XML</a>]
+[<a href="302/refalign.html">HTML</a>]<br />
+</p>
+
+<hr />
+<a name="303"/>
+<h2>303) Real ontology: Karlsruhe</h2>
+<p>This is a test of comparing our test ontology with an actual
+  ontology which contains more items than the actual items used in the
+  current ontology.
+</p>
+<p>The Karlsruhe ontology (<a href="http://www.aifb.uni-karlsruhe.de/ontology">http://www.aifb.uni-karlsruhe.de/ontology</a>) is used
+  in the Ontoweb portal. It is a refinement from other ontologies such
+  as (KA)<sup>2</sup>. As such it does not only defines
+  bibliographic items but many other items.</p>
+<p>The alignment contains &lt; as well as &gt; relations.</p>
+<p>Ontology : [<a href="303/onto.rdf">RDF/XML</a>]
+[<a href="303/onto.html">HTML</a>]<br />
+Alignment : [<a href="303/refalign.rdf">RDF/XML</a>]
+[<a href="303/refalign.html">HTML</a>]<br />
+</p>
+<!--p>Its schema is the following:<br />
+Publication
+<ul compact="1">
+<li>InProceedings</li>
+<li>InBook</li>
+<li>Manual</li>
+<li>InCollection</li>
+<li>Report
+<ul compact="1">
+<li>TechnicalReport</li>
+<li>ProjectReport</li>
+</ul>
+</li>
+<li>Thesis
+<ul compact="1">
+<li>PhDThesis</li>
+<li>MasterThesis</li>
+</ul>
+</li>
+<li>Unpublished</li>
+<li>Proceedings</li>
+<li>Book</li>
+<li>Booklet</li>
+<li>Misc</li>
+</ul>
+</p-->
+
+<hr />
+<a name="304"/>
+<h2>304) Real ontology: INRIA</h2>
+<p>This is a test of comparing our test ontology with an actual
+  ontology which is not equivalent but quite close (it can be though
+  of as a previous version).
+</p>
+<p>This INRIA ontology (<a href="fr.inrialpes.exmo.rdf.bib.owl">fr.inrialpes.exmo.rdf.bib.owl</a>) has been designed by Antoine Zimmermann from
+  the BibTeX in OWL ontology and our Bibliographic XML DTD. Its goal
+  was to gather easily a number of RDF items. These items were BibTeX
+  entries found on the web and transformed in RDF according to this
+  ontology.</p>
+<p>The actual hierarchy of this ontology contains classes which are subclasses of several other classes.</p>
+<p>Ontology : [<a href="304/onto.rdf">RDF/XML</a>]
+[<a href="304/onto.html">HTML</a>]<br />
+Alignment : [<a href="304/refalign.rdf">RDF/XML</a>]
+[<a href="304/refalign.html">HTML</a>]<br />
+</p>
+<!--p>Its schema is the following:<br />
+Entry
+<ul compact="1">
+<li>Published
+<ul compact="1">
+<li>Article</li>
+</ul>
+</li>
+<li>Composite
+<ul compact="1">
+<li>Book
+<ul compact="1">
+<li>Monography</li>
+</ul>
+</li>
+<li>Proceedings</li>
+</ul>
+</li>
+<li>Informal
+<ul compact="1">
+<li>Booklet</li>
+<li>Misc</li>
+<li>Deliverable</li>
+<li>LectureNotes</li>
+<li>Manual</li>
+<li>Unpublished</li>
+<li>TechReport</li>
+</ul>
+</li>
+<li>Academic
+<ul compact="1">
+<li>Thesis
+<ul compact="1">
+<li>PhDThesis</li>
+<li>MasterThesis</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Part
+<ul compact="1">
+<li>BookPart
+<ul compact="1">
+<li>InBook</li>
+<li>InCollection</li>
+</ul>
+</li>
+<li>InProceedings</li>
+</ul>
+</li>
+<li>MotionPicture</li>
+</ul>
+</p-->
+<hr />
+
+<h1>Versions</h1>
+
+<p>The release notes of the previous test versions used in the OAEI-2007
+can be found <a href="logs.html">here</a>.</p>
+
+<h1>Tools</h1>
+
+<p>A <a href="bench.zip">zip file</a> contains all the material
+  about the contest. That is:
+<ul compact="1">
+<li>This web page;</li>
+<li>All ontology/alignment pairs in OWL/RDF/XML;</li>
+<li>The prior known alignments in RDF/XML;</li>
+<li>All ontology/alignment pairs in HTML;</li>
+<li>XSLT stylesheet from ontologies and alignment to HTML;</li>
+<li>The provided expected alignments in RDF/XML (for the systematic benchmark);</li>
+<li>A directory with some reference ontologies (iCal, Foaf);</li>
+</ul>
+</p>
+
+<p>We would like to find a simple converter from OWL/XML/RDF to 
+N3 (and maybe RDFS).</p>
+
+<p>You can use the <a href="../align.html">Alignment API</a> for manipulating and
+generating your alignments (in particular for computing evaluation of
+your results).</p>
+
+<!--h1>Results</h1>
+
+<p>The fully detailled results, as provided from the competitors
+  files and according to the contests rules can be found <a href="results">here</a>.</p-->
+
+<h1>Acknowledgements</h1>
+
+<p>Many resources have been used for setting up this test (I must put links):
+<ul compact="1">
+<li>BibTeX</li>
+<li>UMBC BibTeX</li>
+<li>MIT BibTex</li>
+<li>Java BibTeX parser</li>
+<li><a href="http://www.aifb.uni-karlsruhe.de/ontology">Karlsruhe
+ ontology</a>
+ and bibtex to RDF translator that we adapted</li>
+<li>INRIA's adaptation of the ontologies and the translator above by
+  Antoine Zimmermann.</li>
+<li><a href="http://www.atl.external.lmco.com/projects/ontology/">Lockheed evaluation format</a>.</li>
+<li>WonderWeb/Manchester's <a href="http://phoebus.cs.man.ac.uk:9999/OWL/Validator">OWL species validator</a></li>
+</ul>
+</p>
+
+<p>Various people helped testing or suggested improvements and tests:
+<ul compact="1">
+<li>York Sure and Oscar Corcho for welcoming this at their EON workshop;</li>
+<li>Heiner Stuckenschmidt helped providing several sorts of tests;</li>
+<li>Liz Palmer proposed variation tests;</li>
+<li>Natasha Noy and David Loup have been very helpful in noticing and
+  correcting bugs.</li>
+<li>Rapha&euml;l Troncy helped debug the 2005 version of these tests.</li>
+<li>S&#322;awomir Niedba&#322;a, Guillermo Nudelman Hess, Alfio
+  Ferrara, Sabine Massmann and Wei Hu suggested even more precise
+  corrections in 2006.</li>
+
+</ul>
+</p>
+
+<h1>Contacts</h1>
+<p>Contact address is Jerome : Euzenat # inrialpes : fr</p>
+<hr />
+<center><small>http://oaei.ontologymatching.org/2007/benchmarks</small></center>
+<hr />
+$Id: index.html,v 1.24 2007/05/15 21:30:37 euzenat Exp $
+</body>
+</html>
