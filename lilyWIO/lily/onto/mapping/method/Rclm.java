@@ -4,11 +4,10 @@
  * Original author	 Peng Wang, School of Computer Science & Eng., Southeast University
  * Author email      pwangseu@gmail.com
  * Web               http://ontomapping.googlepages.com
- * Created			 2007-4-25
  * Filename          Rclm.java
  * Version           2.0
  * 
- * Last modified on  2007-4-26
+ * Last modified on  2018-9-26
  *               by  Peng Wang
  * -----------------------
  * Functions describe:
@@ -64,7 +63,6 @@ import lily.onto.handle.propagation.SubSimPropagation;
  * Class information
  * -------------------
  * @author Peng Wang
- * @date   2007-4-25
  * 
  * describe:
  * 主要类。子图方法的起点
@@ -611,9 +609,9 @@ public class Rclm {
 		if (isNeedSimProg){
 	        /*相似度传播*/
 			System.out.println("Similarity Propagating...");
-//			simPropagation();
+			simPropagation();
 			//合并结果			
-//			combineResult();
+			combineResult();
 		}
 
 		//显示映射结果
